@@ -1,8 +1,10 @@
+import os
+
 class Config(object):
-    database = ''
-    server = ''
-    username = ''
-    password = ''
+    database = os.environ.get('DB')
+    server = os.environ.get('ENDPOINT')
+    username = os.environ.get('USERNAME_DB')
+    password = os.environ.get('PASSWORD')
     SQLALCHEMY_DATABASE_URI = "mysql+pymysql://"+username+":"+password+"@"+server+"/"+database
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 

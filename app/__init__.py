@@ -10,7 +10,7 @@ app = Flask(__name__)
 local_path = os.environ.get('PATH_LOCAL')
 
 
-app.config.from_object(TestConfig)
+app.config.from_object(Config)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db, compare_type=True)
