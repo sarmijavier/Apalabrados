@@ -1,7 +1,11 @@
 import os
 
 class Config(object):
-    SQLALCHEMY_DATABASE_URI = os.environ.get('CLEARDB_DATABASE_URL')
+    database = os.environ.get('DB')
+    server = os.environ.get('ENDPOINT')
+    username = os.environ.get('USERNAME_DB')
+    password = os.environ.get('PASSWORD')
+    SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://{user}:{password}@{server}/{database}'.format(user=username, password=password, server=server, database=database)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class TestConfig(object):
