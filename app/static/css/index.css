@@ -1,6 +1,28 @@
+body {
+	background-color: #51a6d6;
+
+}
 
 .main {
 	display: flex;
 	justify-content: center;
 	padding: 20px;
+}
+
+.main_section {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 430px;
+	height: 250px;
+	border-radius: 50px;
+	background: #51a6d6;
+	box-shadow: -20px 20px 60px #458db6, 20px -20px 60px #5dbff6;
+}
+
+.form__submit {
+	background-color: #fff;
+	width: 98px;
+	height: 23px;
+	border-radius: 18px;
 }
