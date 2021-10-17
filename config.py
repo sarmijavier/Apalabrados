@@ -7,7 +7,7 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class TestConfig(object):
-    database = 'art_catalogue'
+    database = 'apalabrados_db'
     server = 'localhost:3306'
     username = 'root'
     password = ''

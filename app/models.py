@@ -54,6 +54,7 @@ class Textos(db.Model, SerializerMixin, CustomSerializer):
 
     fields = [
             'id',
+            'texto',
             'inicial',
             'final'
         ]

@@ -4,9 +4,28 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/css/index.css">
 	<title>Document</title>
 </head>
 <body>
-		<h1>Hola</h1>
+		<main class="main">
+			<title class="main__title">Apalabrados</title>
+			{%if data %}
+				<h1 class="main__h1">texto: {{ data }}</h1>
+				<h2 class="main__h2"> Primera Letra:  {{ first_letter }}</h2>
+				<h2 class="main__h2"> Última Letra: {{ last_letter }}</h2>
+				<h3 class="main__h3"> Carácteres especiales: {{ special_caracters }}</h3>
+			{% elif numbers %}
+				<h1 class="main__h1" >números: {{ numbers }}</h1>
+			{% endif %}
+	
+			<form class="main__form" action="/api/apalabrados" method="post">
+				<h4>Hola, digita un input</h4>
+				<label class="form__label">Texto</label>
+				<input class="form__input" type='text' name='texto' />
+				<button class="form__submit" type="submit">Enviar</button>
+			</form>
+		</main>
 </body>
 </html>
+
