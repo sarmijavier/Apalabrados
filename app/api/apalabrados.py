@@ -35,7 +35,7 @@ def post_caracter():
 		db.session.add(number_to_save)
 		db.session.commit()
 
-		return render_template('apalabrados.html', numbers=data)
+		return render_template('apalabrados.html', numbers=data, acumulado=acumulado)
 
 	else: 
 		first_letter = data[0]
