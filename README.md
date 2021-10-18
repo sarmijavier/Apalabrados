@@ -25,21 +25,4 @@ va a mostrar el número que ingresaste y el acumulado, el cual es la suma de tod
 ![](images/2.png) 
 
 # Diagrama de flujo de la aplicación
-```flow
-st=>start: Input
-op=>operation: enviar data
-cond=>condition: Es texto?
-text=>operation: separar primera y última letra
-character=>condition: Hay carácteres especiales?
-number=>operation:  números
-numberAverage=>operation: Traer último acumulado y sumarle el nuevo número
-specialCharacters=>operation: Separar carácteres especiales
-e=>end: Guardar datos
-
-
-st->op->cond
-cond(yes)->text->character
-cond(no)->number->numberAverage->e
-character(yes)->specialCharacters->e
-character(no)->e
-```
+![](images/3.png) 
